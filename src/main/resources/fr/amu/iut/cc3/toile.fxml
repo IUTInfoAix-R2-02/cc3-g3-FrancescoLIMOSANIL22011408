@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" fx:controller="fr.amu.iut.cc3.ToileController" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
     <Pane prefHeight="400.0" prefWidth="400.0">
         <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
@@ -26,42 +26,48 @@
         <Text text="Compétence 4" x="170" y="410" />
         <Text text="Compétence 5" x="26" y="300" />
         <Text text="Compétence 6" x="26" y="99" />
+        <Circle fx:id="Circle1" visible="false" radius="5"/>
+        <Circle fx:id="Circle2" visible="false" radius="5"/>
+        <Circle fx:id="Circle3" visible="false" radius="5"/>
+        <Circle fx:id="Circle4" visible="false" radius="5"/>
+        <Circle fx:id="Circle5" visible="false" radius="5"/>
+        <Circle fx:id="Circle6" visible="false" radius="5"/>
         <Pane fx:id="toile" styleClass="toile" />
     </Pane>
 <GridPane hgap="10" vgap="10">
     <padding><Insets bottom="40" left="20" right="20" top="40" /></padding>
 
-    <Label style="-fx-font-size: 10" text="Compétence 1 - Réaliser" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <Label style="-fx-font-size: 10" text="Compétence 6 - Collaborer" GridPane.columnIndex="0" GridPane.rowIndex="0">
     <padding>
         <Insets bottom="10" right="20" /></padding>
     </Label>
-        <Label style="-fx-font-size:10" text="Compétence 2 - Optimiser" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label style="-fx-font-size:10" text="Compétence 1 - Réaliser" GridPane.columnIndex="0" GridPane.rowIndex="1">
     <padding>
         <Insets bottom="10" right="20" /></padding>
         </Label>
-        <Label style="-fx-font-size:10" text="Compétence 3 - Administer" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Label style="-fx-font-size:10" text="Compétence 2 - Optimiser" GridPane.columnIndex="0" GridPane.rowIndex="2">
     <padding>
         <Insets bottom="10" right="20" /></padding>
         </Label>
-        <Label style="-fx-font-size:10" text="Compétence 4 - Gérer" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Label style="-fx-font-size:10" text="Compétence 3 - Administer" GridPane.columnIndex="0" GridPane.rowIndex="3">
     <padding>
         <Insets bottom="10" right="20" /></padding>
         </Label>
-        <Label style="-fx-font-size:10" text="Compétence 5 - Conduire" GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <Label style="-fx-font-size:10" text="Compétence 4 - Gérer" GridPane.columnIndex="0" GridPane.rowIndex="4">
     <padding>
         <Insets bottom="10" right="20" /></padding>
         </Label>
-        <Label style="-fx-font-size:10" text="Compétence 6 - Collaborer" GridPane.columnIndex="0" GridPane.rowIndex="5">
+        <Label style="-fx-font-size:10" text="Compétence 5 - Conduire" GridPane.columnIndex="0" GridPane.rowIndex="5">
     <padding>
         <Insets bottom="10" right="20" /></padding>
         </Label>
 
-    <TextField fx:id="comp1" maxWidth="50" GridPane.columnIndex="2" />
-    <TextField fx:id="comp2" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-    <TextField fx:id="comp3" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-    <TextField fx:id="comp4" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-    <TextField fx:id="comp5" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-    <TextField fx:id="comp6" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <TextField fx:id="comp1" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#HandlerActionOnField" />
+    <TextField fx:id="comp2" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#HandlerActionOnField"/>
+    <TextField fx:id="comp3" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#HandlerActionOnField"/>
+    <TextField fx:id="comp4" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#HandlerActionOnField"/>
+    <TextField fx:id="comp5" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="4" onAction="#HandlerActionOnField"/>
+    <TextField fx:id="comp6" maxWidth="50" GridPane.columnIndex="2" GridPane.rowIndex="5" onAction="#HandlerActionOnField"/>
        <HBox GridPane.rowIndex="6">
        <Button fx:id="trace" text="Tracer" GridPane.columnIndex="0" GridPane.rowIndex="6" />
        <Button fx:id="vide" text="Vider" GridPane.columnIndex="1" GridPane.rowIndex="6" />
